@@ -1,62 +1,70 @@
 import React from 'react';
+import { useState } from 'react';
 import './App.css'
 
-function Navleft() {
-  return (
-    <>
-      <div className='Navleft'>
-        <a className='logo' href='google.com'>Logo</a>
-      </div>
-    </>
-  )
-}
-
-function Navcenter() {
-  return (
-    <>
-      <div className='Navcenter'>
-        <h3>Home</h3>
-        <h3>About Us</h3>
-        <h3>Contact Us</h3>
-        <h3>Services</h3>
-      </div>
-    </>
-  )
-}
-
-function Navright() {
-  return (
-    <>
-      <div className='Navright'>
-        <h4>Login</h4>
-        <h4>Signup</h4>
-      </div>
-    </>
-  )
-}
-
-function Develco () {
-  return (
-    <h1 className='develco'>DevelCo</h1>
-  )
-}
 
 function App() {
+  
+  function Navleft() {
+    return (
+      <>
+        <div className='Navleft'>
+          <a className='logo' href='google.com'>Logo</a>
+        </div>
+      </>
+    )
+  }
+  
+  function Navcenter() {
+    return (
+      <>
+        <div className='Navcenter'>
+          <h3>Home</h3>
+          <h3>About Us</h3>
+          <h3>Contact Us</h3>
+          <h3>Services</h3>
+          <h3>Portfolio</h3>
+        </div>
+      </>
+    )
+  }
+  
+  
+  
+  function Develco() {
+    return (
+      <h1 className='develco'>DevelCo</h1>
+    )
+  }
+
+  function Clicked() {
+    console.log("clicked")
+  }
+  
+  function Button() {
+    return (
+      <button className='button' onClick={Clicked}>Let's Explore</button>
+    )
+  }
+
   return (
     <>
       <div className='Navbar'>
         <Navleft />
         <Navcenter />
-        <Navright />
       </div>
       <div className='Body'>
-        <img className='bodyimg' src="https://images.pexels.com/photos/2653362/pexels-photo-2653362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
         <Develco />
-        <p className='desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero non debitis molestias repellat vero voluptate voluptatum unde cum, et numquam dolore reiciendis expedita consectetur suscipit ea tempore sequi laborum quibusdam.
-        Dolore tenetur cum nihil iste neque aliquid, quasi vero nesciunt incidunt rem quibusdam! Magni autem natus quas, obcaecati eius commodi tempora praesentium saepe vitae delectus, ullam voluptatibus aspernatur, rem iure?
-        Alias repellat exercitationem hic modi asperiores quidem blanditiis, repellendus nesciunt, quasi saepe aliquid. Illo, saepe praesentium dignissimos molestiae obcaecati suscipit placeat aut in recusandae qui id odit ad, incidunt dolorum.
-        Eaque voluptas aspernatur fugit sunt tenetur, corrupti dolor, id quae nostrum sed animi ut! Cumque eius dignissimos itaque, id quia maxime sunt obcaecati minus esse? Animi temporibus asperiores doloremque commodi!</p>
+        <p className='desc'>
 
+          DevelCO is a dynamic website development firm committed to delivering cutting-edge digital solutions for businesses worldwide. With a seasoned team of developers and designers, we excel in crafting bespoke websites, e-commerce platforms, and mobile applications that drive results.
+          <br />
+          Our approach is rooted in collaboration and innovation. We take the time to understand your unique business objectives, ensuring that every project is tailored to meet your specific needs. From concept to launch, we work tirelessly to bring your vision to life, leveraging the latest technologies and industry best practices to deliver exceptional results.
+          <br />
+          At DevelCO, client satisfaction is our top priority. We pride ourselves on our transparent communication, attention to detail, and dedication to delivering projects on time and within budget. Whether you're a small startup or a large enterprise, we're here to help you navigate the digital landscape and achieve your goals.
+          <br />
+          Discover the difference that expert website development can make for your business. Get in touch with DevelCO today, and let's elevate your online presence together.</p>
+        <Button />
       </div>
       <footer className='footer'>
         <h1>Footer </h1>
